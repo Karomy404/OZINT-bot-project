@@ -2,5 +2,8 @@ import whois
 
 
 class OzintDomain():
-    def owhois(self, domain: str):
-        return whois.whois(domain)
+    def __init__(self, domain: str):
+        self.domain = domain
+
+    def whois(self):
+        return whois.whois(self.domain)

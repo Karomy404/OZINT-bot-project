@@ -10,8 +10,8 @@ state = {"verbose": False}
 def whois(domain: str):
     """Whois a domain"""
     typer.echo(f"Whois {domain}")
-    dom = domains.OzintDomain()
-    print(dom.owhois(domain=domain))
+    dom = domains.OzintDomain(domain=domain)
+    print(dom.whois())
 
 
 @app.command("echo")
